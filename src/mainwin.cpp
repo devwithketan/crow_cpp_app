@@ -76,7 +76,7 @@ int main()
 			});
 
 	// Handle POST request to create a downloadable file
-	CROW_ROUTE(app, "/download-file").methods("POST"_method)
+	CROW_ROUTE(app, "/process-file").methods("POST"_method)
 		([](const crow::request& req) {
 		// Example: Let's pretend we are generating a file from POST data
 		// Get the request body (assume it's JSON for simplicity)
