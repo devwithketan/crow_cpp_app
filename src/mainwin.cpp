@@ -73,7 +73,7 @@ int main()
 		//res.write(os.str());
 		//res.end();
 		return crow::response(200);
-			});
+	});
 
 	// Handle POST request to create a downloadable file
 	CROW_ROUTE(app, "/process-file").methods("POST"_method)
@@ -112,7 +112,7 @@ int main()
 
 		// Send the file content as the response
 		return res;
-			});
+	});
 
 	////define your endpoint at the root directory
 	CROW_ROUTE(app, "/")([]() {
@@ -125,7 +125,7 @@ int main()
 		os << a + b;
 		res.write(os.str());
 		res.end();
-			});
+	});
 
 	//set the port, set the app to run on multiple threads, and run the app
 	app.bindaddr("127.0.0.1").port(18080).multithreaded().run();
